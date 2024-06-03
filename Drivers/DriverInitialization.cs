@@ -14,7 +14,7 @@ namespace Test_Automation_Assignment.Drivers
 
             new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
             driver = new ChromeDriver(ChromeOptions());
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
         public static IWebDriver GetDriver()
         {

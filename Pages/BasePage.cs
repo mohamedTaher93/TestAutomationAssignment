@@ -14,7 +14,7 @@ namespace Test_Automation_Assignment.Pages
 
         public BasePage(IWebDriver driver) {
             this.driver = driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
         }
         public void LaunchWebsite()
         {
@@ -24,7 +24,6 @@ namespace Test_Automation_Assignment.Pages
         public void ClickElement(IWebDriver driver, By by)
         {
             IWebElement element = driver.FindElement(by);
-            wait.Until(ExpectedConditions.ElementToBeClickable(element));
             element.Click();
         }
         public void ClickElementByJs(IWebDriver driver, By by)
